@@ -8,11 +8,11 @@
     <title>Devstagram | @yield('titulo')</title>
     {{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script src="{{ asset('js/app.js') }}" defer></script> --}}
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite(['resources/css/app.css', 'resources/js/app.js']) 
 
     @livewireStyles
 </head>
-
+ 
 <body class="bg-gray-100">
 
     <header class="p-5 border-b bg-white shadow">
@@ -70,7 +70,7 @@
     </main>
 
     <footer class="text-center p-5 font-bold uppercase mt-10">
-        Devstagram - Todos los derechos reservados {{ now()->year }}
+        Devstagram - Todos los derechos reservados {{ now()->year }} - jm
     </footer>
 
     @livewireScripts
