@@ -10,11 +10,10 @@
             <img src="{{ asset('uploads') . '/' . $post->imagen }}" alt="Imagen del post {{ $post->titulo }}">
 
             <div class="p-3 flex items-center">
-               
+               {{-- Zona reactiva hecha con livewire --}}
                 @auth
                     <livewire:like-post :post="$post" />
                 @endauth
-
             </div>
 
             <div>
@@ -41,8 +40,10 @@
         </div>
         <div class="md:w-1/2 p-5">
             <div class="shadow p-5 pb-5 bg-white">
+                <livewire:comentario-post :post="$post" />
+                <livewire:show-comentario-post :post="$post" />
 
-                @auth
+                {{-- @auth
                     <p class="text-xl font-bold text-center mb-4">Agrega un Nuevo Comentario</p>
 
                     @if (session('mensaje'))
@@ -84,7 +85,7 @@
                         <p class="p-10 text-center">No hay comentarios aún</p>
                     @endif
 
-                </div>
+                </div> --}}
 
             </div>
         </div>
